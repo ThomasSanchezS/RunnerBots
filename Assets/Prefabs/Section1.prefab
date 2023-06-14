@@ -153,6 +153,7 @@ GameObject:
   - component: {fileID: 2854451237336004967}
   - component: {fileID: 2854451237336004964}
   - component: {fileID: 2854451237336004965}
+  - component: {fileID: 3710249185957412055}
   m_Layer: 0
   m_Name: BigRock
   m_TagString: Untagged
@@ -236,8 +237,21 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.75, y: 1, z: 0.6542969}
+  m_Center: {x: 0, y: 0, z: -0.17285156}
+--- !u!114 &3710249185957412055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2854451237336004962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eee8ee331c23bb4eaf92c844839ced8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 4687875462124104596, guid: e7ff8ba810e4108408a7af14c824d485, type: 3}
 --- !u!1 &2854451237388481479
 GameObject:
   m_ObjectHideFlags: 0
