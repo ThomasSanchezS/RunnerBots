@@ -63,10 +63,20 @@ public class PlayerMove : MonoBehaviour
         Vector3 velocity = rb.velocity;
         if (canMove == true)
         {
-            if (rb.position.x > LevelBoundary.leftSide && rb.position.x < LevelBoundary.rightSide)
+            if (rb.position.x >= LevelBoundary.leftSide && rb.position.x <= LevelBoundary.rightSide)
             {
                 velocity.x = moveValue * leftRightSpeed;
                 rb.velocity = velocity;
+
+            }
+
+            if (transform.position.x > LevelBoundary.rightSide)
+            {
+                transform.position = new Vector3(LevelBoundary.rightSide, transform.position.y, transform.position.z);
+            }
+            if (transform.position.x < LevelBoundary.leftSide)
+            {
+                transform.position = new Vector3(LevelBoundary.leftSide, transform.position.y, transform.position.z);
             }
 
             if (jumpPressed && isGrounded)
