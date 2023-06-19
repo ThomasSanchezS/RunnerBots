@@ -1,31 +1,90 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMove : MonoBehaviour
 {
+    public InputActionAsset playerActions;
+    private InputActionMap player;
+    private InputAction move;
+    private InputAction jump;
+    private InputAction slide;
+    public float moveValue;
+    public bool jumpPressed;
+    public bool slidePressed;
     public float speed = 5f;
     public float leftRightSpeed = 4f;
-    public float acceleration;
+    public float acceleration = 5f;
     static public bool canMove = false;
+    private Rigidbody rb;
+    private bool isGrounded = true;
+
+    void Awake()
+    {
+        player = playerActions.FindActionMap("player");
+        move = player.FindAction("Movement");
+        jump = player.FindAction("Jump");
+        slide = player.FindAction("Slide");
+
+        move.performed += ctx => moveValue = ctx.ReadValue<float>();
+        move.canceled += ctx => moveValue = 0;
+
+        jump.performed += ctx => jumpPressed = true;
+        jump.canceled += ctx => jumpPressed = false;
+        slide.performed += ctx => slidePressed = true;
+        slide.canceled += ctx => slidePressed = false;
+    }
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
+    private void OnEnable()
+    {
+        move.Enable();
+        jump.Enable();
+        slide.Enable();
+    }
+
+    private void OnDisable()
+    {
+        move.Disable();
+        jump.Disable();
+        slide.Disable();
+    }
 
 
     void Update()
     {
         transform.Translate(Vector3.forward * Time.deltaTime * speed, Space.World);
-        if(canMove == true){
-            if(Input.GetKey(KeyCode.A))
+        Vector3 velocity = rb.velocity;
+        if (canMove == true)
+        {
+            if (rb.position.x > LevelBoundary.leftSide && rb.position.x < LevelBoundary.rightSide)
             {
-                if(this.gameObject.transform.position.x > LevelBoundary.leftSide){
-                    transform.Translate(Vector3.left * Time.deltaTime * leftRightSpeed);
-                }
+                velocity.x = moveValue * leftRightSpeed;
+                rb.velocity = velocity;
             }
-            if(Input.GetKey(KeyCode.D))
+
+            if (jumpPressed && isGrounded)
             {
-                if(this.gameObject.transform.position.x < LevelBoundary.rightSide){
-                    transform.Translate(Vector3.left * Time.deltaTime * leftRightSpeed * -1);
-                }
+                rb.AddForce(Vector3.up * acceleration, ForceMode.Impulse);
+                isGrounded = false;
             }
+
         }
     }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = true;
+        }
+
+    }
+
 }
