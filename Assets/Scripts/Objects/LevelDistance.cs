@@ -11,6 +11,7 @@ public class LevelDistance : MonoBehaviour
     public bool addingDis = false;
     public float disDelay = 0.3f;
     public TMP_Text endPoints;
+    public float disRunMultiplier = 1;
 
     void Update()
     {
@@ -21,9 +22,9 @@ public class LevelDistance : MonoBehaviour
         }
     }
     
-    IEnumerator AddingDis()
+    public IEnumerator AddingDis()
     {
-        disRun += 1;
+        disRun += 1 * disRunMultiplier;
         disPoints.text = "Puntos: " + disRun.ToString(); 
         endPoints.text = "Puntos: " + disRun.ToString(); 
         yield return new WaitForSeconds(disDelay);

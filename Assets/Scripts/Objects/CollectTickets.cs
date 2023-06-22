@@ -9,6 +9,5 @@ public class CollectTickets : MonoBehaviour
   {
     CollectiblesControl.ticketsCount += 1;
     this.gameObject.SetActive(false);
-    Debug.Log("Agarrado");
   }
 }
