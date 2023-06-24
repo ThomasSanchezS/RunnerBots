@@ -14,7 +14,6 @@ public class PlayerMove : MonoBehaviour
     public float moveValue;
     public bool jumpPressed;
     public bool slidePressed;
-    public float speed = 5f;
     public float leftRightSpeed = 4f;
     public float acceleration = 5f;
     static public bool canMove = false;
@@ -59,7 +58,6 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector3.forward * Time.deltaTime * speed, Space.World);
         Vector3 velocity = rb.velocity;
         if (canMove == true)
         {

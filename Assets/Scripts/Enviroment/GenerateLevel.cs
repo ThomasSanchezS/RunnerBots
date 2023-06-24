@@ -5,26 +5,14 @@ using UnityEngine;
 public class GenerateLevel : MonoBehaviour
 {
     public GameObject[] section;
-    public int zPos = 20;
-    public bool creatingSection = false;
+    public float zPos = 30f;
+    private bool creatingSection = false;
     public int secNum;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(creatingSection == false)
-        {
-            creatingSection = true;
-            StartCoroutine(GenerateSection());
-        }
-    }
-
-    IEnumerator GenerateSection()
+    public void GenerateSection()
     {
         secNum = Random.Range(0, 3);
         Instantiate(section[secNum], new Vector3(0, 0, zPos), Quaternion.identity);
-        zPos += 20;
-        yield return new WaitForSeconds(2);
         creatingSection = false;
     }
 }

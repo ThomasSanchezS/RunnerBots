@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LevelStart : MonoBehaviour
 {
+    public GameObject levelControl;
+    private GenerateLevel generateLevel;
     public GameObject countDown3;
     public GameObject countDown2;
     public GameObject countDown1;
@@ -12,6 +14,7 @@ public class LevelStart : MonoBehaviour
 
     void Start()
     {
+        generateLevel = levelControl.GetComponent<GenerateLevel>();
         StartCoroutine(CountSequence());
     }
 
@@ -26,6 +29,7 @@ public class LevelStart : MonoBehaviour
         yield return new WaitForSeconds(1f);
         countDownGo.SetActive(true);
         PlayerMove.canMove = true;
+        generateLevel.GenerateSection();
 
     }
 }
