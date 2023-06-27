@@ -17,7 +17,7 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate((transform.position - playerPos).normalized * speed * Time.deltaTime);
+        transform.Translate((playerPos - transform.position).normalized * speed * Time.deltaTime);
         if(transform.position.y < -5){
             Destroy(gameObject);
         }
