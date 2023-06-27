@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3413246523471273445}
   - component: {fileID: 3413246523471273444}
   - component: {fileID: 3413246523471273447}
+  - component: {fileID: 3461233661852518808}
   m_Layer: 0
   m_Name: TallObstacle (4)
   m_TagString: Untagged
@@ -97,6 +98,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3461233661852518808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3413246523471273446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eee8ee331c23bb4eaf92c844839ced8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3413246523712025724
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,6 +201,7 @@ GameObject:
   - component: {fileID: 3413246523920045068}
   - component: {fileID: 3413246523920045071}
   - component: {fileID: 3413246523920045070}
+  - component: {fileID: 2204408989612597842}
   m_Layer: 0
   m_Name: TallObstacle (3)
   m_TagString: Untagged
@@ -203,7 +217,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3413246523920045065}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.4599999, y: 1.8599999, z: -0.58}
+  m_LocalPosition: {x: 1.4599999, y: 1.8599999, z: -3.04}
   m_LocalScale: {x: 1, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -273,6 +287,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2204408989612597842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3413246523920045065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eee8ee331c23bb4eaf92c844839ced8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3413246524391939066
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,6 +311,7 @@ GameObject:
   - component: {fileID: 3413246524391939065}
   - component: {fileID: 3413246524391939064}
   - component: {fileID: 3413246524391939067}
+  - component: {fileID: 5148408531570577512}
   m_Layer: 0
   m_Name: TallObstacle (1)
   m_TagString: Untagged
@@ -300,7 +327,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3413246524391939066}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.51, y: 1.86, z: -8.32}
+  m_LocalPosition: {x: -1.51, y: 1.86, z: -13.04}
   m_LocalScale: {x: 1, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -370,6 +397,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5148408531570577512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3413246524391939066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eee8ee331c23bb4eaf92c844839ced8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3413246524704675815
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,6 +421,7 @@ GameObject:
   - component: {fileID: 3413246524704675834}
   - component: {fileID: 3413246524704675813}
   - component: {fileID: 3413246524704675812}
+  - component: {fileID: 6660783575559241123}
   m_Layer: 0
   m_Name: TallObstacle (2)
   m_TagString: Untagged
@@ -397,7 +437,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3413246524704675815}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.03999996, y: 1.8599999, z: -4.99}
+  m_LocalPosition: {x: 0.03999996, y: 1.8599999, z: -7.92}
   m_LocalScale: {x: 1, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -467,6 +507,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6660783575559241123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3413246524704675815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eee8ee331c23bb4eaf92c844839ced8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3413246524807784711
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,6 +531,7 @@ GameObject:
   - component: {fileID: 3413246524807784730}
   - component: {fileID: 3413246524807784709}
   - component: {fileID: 3413246524807784708}
+  - component: {fileID: 5651754014687277254}
   m_Layer: 0
   m_Name: TallObstacle (5)
   m_TagString: Untagged
@@ -494,7 +547,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3413246524807784711}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.75, y: 1.8599999, z: 6.6900005}
+  m_LocalPosition: {x: -1.75, y: 1.8599999, z: 7.78}
   m_LocalScale: {x: 1, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -564,6 +617,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5651754014687277254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3413246524807784711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eee8ee331c23bb4eaf92c844839ced8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5273232141235437
 PrefabInstance:
   m_ObjectHideFlags: 0

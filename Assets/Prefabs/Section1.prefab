@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2854451236389027939}
   - component: {fileID: 2854451236389027936}
   - component: {fileID: 2854451236389027937}
+  - component: {fileID: 6270188413274794929}
   m_Layer: 0
   m_Name: Obstacle
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2854451236389027934}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.17, y: 0.96, z: -3.21}
+  m_LocalPosition: {x: 1.17, y: 0.96, z: -4.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -97,6 +98,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6270188413274794929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2854451236389027934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eee8ee331c23bb4eaf92c844839ced8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2854451236693998790
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,7 +210,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2854451237336004962}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.49, z: -8.11}
+  m_LocalPosition: {x: 0, y: 1.49, z: -11.23}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -279,8 +292,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eee8ee331c23bb4eaf92c844839ced8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 4687875462124104596, guid: e7ff8ba810e4108408a7af14c824d485, type: 3}
-  levelControl: {fileID: 0}
 --- !u!1 &2854451237388481479
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,6 +304,7 @@ GameObject:
   - component: {fileID: 2854451237388481480}
   - component: {fileID: 2854451237388481481}
   - component: {fileID: 2854451237388481478}
+  - component: {fileID: 6861588434715844606}
   m_Layer: 0
   m_Name: TallObstacle
   m_TagString: Untagged
@@ -308,7 +320,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2854451237388481479}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.05, z: 0}
+  m_LocalPosition: {x: 0, y: 2.05, z: 2.56}
   m_LocalScale: {x: 1, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -378,6 +390,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6861588434715844606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2854451237388481479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eee8ee331c23bb4eaf92c844839ced8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2854451237707543724
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,6 +414,7 @@ GameObject:
   - component: {fileID: 2854451237707543729}
   - component: {fileID: 2854451237707543726}
   - component: {fileID: 2854451237707543727}
+  - component: {fileID: 1792067651026513737}
   m_Layer: 0
   m_Name: Rock
   m_TagString: Untagged
@@ -405,7 +430,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2854451237707543724}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.94, z: 6.5}
+  m_LocalPosition: {x: 0, y: 0.94, z: 9.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -475,6 +500,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1792067651026513737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2854451237707543724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eee8ee331c23bb4eaf92c844839ced8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &807493418372239745
 PrefabInstance:
   m_ObjectHideFlags: 0

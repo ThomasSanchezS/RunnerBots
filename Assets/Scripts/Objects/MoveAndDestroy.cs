@@ -20,7 +20,7 @@ public class MoveAndDestroy : MonoBehaviour
     {
         transform.Translate(Vector3.back * Time.deltaTime * speed, Space.World);
 
-        if(transform.position.z < 0 && transform.position.z > -0.2 && noRepeating)
+        if(transform.position.z < -5 && transform.position.z > -5.2 && noRepeating)
         {
             StartCoroutine(CreateSection());
         }

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ObstacleColl : MonoBehaviour
 {
-    public GameObject player;
-    public GameObject levelControl;
+    private GameObject player;
+    private GameObject levelControl;
 
 private void Start() {
     //referencia al animator del player
