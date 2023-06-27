@@ -30,7 +30,7 @@ public class Enemy : MonoBehaviour
 
         projectilesLength = projectiles.Count;
         startPos = transform.position;
-        InvokeRepeating("RandomMultiplier", 5f, 3f);
+        InvokeRepeating("RandomMultiplier", 2f, 3f);
         InvokeRepeating("InvokingProjectiles", 3f, 2f);
         InvokeRepeating("PosChanger", 6f, 6f);
     }
@@ -46,13 +46,14 @@ public class Enemy : MonoBehaviour
 
         if (life < 1)
         {
+            animator.SetBool("normal",true);
             Destroy(gameObject);
         }
     }
     private void RandomMultiplier()
     {
         ;
-        random = Random.Range(-2, 3);
+        random = Random.Range(-9, 10);
     }
 
     private void InvokingProjectiles()
