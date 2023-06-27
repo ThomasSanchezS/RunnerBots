@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2854451236389027939}
   - component: {fileID: 2854451236389027936}
   - component: {fileID: 2854451236389027937}
-  - component: {fileID: 6270188413274794929}
+  - component: {fileID: 3142184107309312208}
   m_Layer: 0
   m_Name: Obstacle
   m_TagString: Untagged
@@ -98,7 +98,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6270188413274794929
+--- !u!114 &3142184107309312208
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,8 +119,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2854451236693998793}
-  - component: {fileID: -1878939214255797217}
   - component: {fileID: 4975153997235475384}
+  - component: {fileID: 4510833231347906215}
   m_Layer: 0
   m_Name: Section1
   m_TagString: Untagged
@@ -155,20 +155,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-1878939214255797217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2854451236693998790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c1d140320859c47a2e368eac774510, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelController: {fileID: 498380767280701505, guid: fa63edd2d9185ae4da01d28952f21586, type: 3}
-  speed: 10
 --- !u!65 &4975153997235475384
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -182,6 +168,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.8705598, y: 2.2710996, z: 15.639923}
   m_Center: {x: 0.019946277, y: 1.4193075, z: -0.93289185}
+--- !u!114 &4510833231347906215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2854451236693998790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c1d140320859c47a2e368eac774510, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelController: {fileID: 498380767280701505, guid: fa63edd2d9185ae4da01d28952f21586, type: 3}
+  speed: 10
 --- !u!1 &2854451237336004962
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 2854451237336004967}
   - component: {fileID: 2854451237336004964}
   - component: {fileID: 2854451237336004965}
-  - component: {fileID: 3710249185957412055}
+  - component: {fileID: 959634582971602771}
   m_Layer: 0
   m_Name: BigRock
   m_TagString: Untagged
@@ -280,7 +280,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.75, y: 1, z: 0.6542969}
   m_Center: {x: 0, y: 0, z: -0.17285156}
---- !u!114 &3710249185957412055
+--- !u!114 &959634582971602771
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -304,7 +304,7 @@ GameObject:
   - component: {fileID: 2854451237388481480}
   - component: {fileID: 2854451237388481481}
   - component: {fileID: 2854451237388481478}
-  - component: {fileID: 6861588434715844606}
+  - component: {fileID: 7629712132227092742}
   m_Layer: 0
   m_Name: TallObstacle
   m_TagString: Untagged
@@ -390,7 +390,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6861588434715844606
+--- !u!114 &7629712132227092742
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -414,7 +414,7 @@ GameObject:
   - component: {fileID: 2854451237707543729}
   - component: {fileID: 2854451237707543726}
   - component: {fileID: 2854451237707543727}
-  - component: {fileID: 1792067651026513737}
+  - component: {fileID: 8785114386134380351}
   m_Layer: 0
   m_Name: Rock
   m_TagString: Untagged
@@ -500,7 +500,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1792067651026513737
+--- !u!114 &8785114386134380351
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

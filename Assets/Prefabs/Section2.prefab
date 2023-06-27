@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3413246523471273445}
   - component: {fileID: 3413246523471273444}
   - component: {fileID: 3413246523471273447}
-  - component: {fileID: 3461233661852518808}
+  - component: {fileID: 8882352181817861058}
   m_Layer: 0
   m_Name: TallObstacle (4)
   m_TagString: Untagged
@@ -98,7 +98,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3461233661852518808
+--- !u!114 &8882352181817861058
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,8 +119,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3413246523712025725}
-  - component: {fileID: 1920098047287397382}
   - component: {fileID: 6370528616997644269}
+  - component: {fileID: 2159897043171448378}
   m_Layer: 0
   m_Name: Section2
   m_TagString: Untagged
@@ -162,20 +162,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1920098047287397382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3413246523712025724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c1d140320859c47a2e368eac774510, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelController: {fileID: 498380767280701505, guid: fa63edd2d9185ae4da01d28952f21586, type: 3}
-  speed: 10
 --- !u!65 &6370528616997644269
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -189,6 +175,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.0559807, y: 2.974083, z: 21.809822}
   m_Center: {x: -0.18669128, y: 1.6844072, z: 1.948864}
+--- !u!114 &2159897043171448378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3413246523712025724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c1d140320859c47a2e368eac774510, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelController: {fileID: 498380767280701505, guid: fa63edd2d9185ae4da01d28952f21586, type: 3}
+  speed: 10
 --- !u!1 &3413246523920045065
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 3413246523920045068}
   - component: {fileID: 3413246523920045071}
   - component: {fileID: 3413246523920045070}
-  - component: {fileID: 2204408989612597842}
+  - component: {fileID: 3715155260404531369}
   m_Layer: 0
   m_Name: TallObstacle (3)
   m_TagString: Untagged
@@ -287,7 +287,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2204408989612597842
+--- !u!114 &3715155260404531369
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -311,7 +311,7 @@ GameObject:
   - component: {fileID: 3413246524391939065}
   - component: {fileID: 3413246524391939064}
   - component: {fileID: 3413246524391939067}
-  - component: {fileID: 5148408531570577512}
+  - component: {fileID: 4212256758110937820}
   m_Layer: 0
   m_Name: TallObstacle (1)
   m_TagString: Untagged
@@ -397,7 +397,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5148408531570577512
+--- !u!114 &4212256758110937820
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -421,7 +421,7 @@ GameObject:
   - component: {fileID: 3413246524704675834}
   - component: {fileID: 3413246524704675813}
   - component: {fileID: 3413246524704675812}
-  - component: {fileID: 6660783575559241123}
+  - component: {fileID: 4155109061243587502}
   m_Layer: 0
   m_Name: TallObstacle (2)
   m_TagString: Untagged
@@ -507,7 +507,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6660783575559241123
+--- !u!114 &4155109061243587502
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -531,7 +531,7 @@ GameObject:
   - component: {fileID: 3413246524807784730}
   - component: {fileID: 3413246524807784709}
   - component: {fileID: 3413246524807784708}
-  - component: {fileID: 5651754014687277254}
+  - component: {fileID: 7201603197731847276}
   m_Layer: 0
   m_Name: TallObstacle (5)
   m_TagString: Untagged
@@ -617,7 +617,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5651754014687277254
+--- !u!114 &7201603197731847276
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

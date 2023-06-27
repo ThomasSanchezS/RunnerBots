@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 161698110239128916}
   - component: {fileID: 161698110239128919}
   - component: {fileID: 161698110239128918}
-  - component: {fileID: 645275820203750018}
+  - component: {fileID: 6154854732909071082}
   m_Layer: 0
   m_Name: BigRock (4)
   m_TagString: Untagged
@@ -98,7 +98,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &645275820203750018
+--- !u!114 &6154854732909071082
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 161698110509594307}
   - component: {fileID: 161698110509594306}
   - component: {fileID: 161698110509594317}
-  - component: {fileID: 4766468674084917600}
+  - component: {fileID: 6689920227240892823}
   m_Layer: 0
   m_Name: BigRock (1)
   m_TagString: Untagged
@@ -208,7 +208,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4766468674084917600
+--- !u!114 &6689920227240892823
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 161698111235357846}
   - component: {fileID: 161698111235357841}
   - component: {fileID: 161698111235357840}
-  - component: {fileID: 5492623937477455837}
+  - component: {fileID: 8737477088267671488}
   m_Layer: 0
   m_Name: BigRock (3)
   m_TagString: Untagged
@@ -318,7 +318,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5492623937477455837
+--- !u!114 &8737477088267671488
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -339,8 +339,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 161698111833122431}
-  - component: {fileID: -7353801102591443855}
   - component: {fileID: 3438014160659475190}
+  - component: {fileID: 3888588686071815951}
   m_Layer: 0
   m_Name: Section3
   m_TagString: Untagged
@@ -383,20 +383,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-7353801102591443855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 161698111833122430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c1d140320859c47a2e368eac774510, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelController: {fileID: 498380767280701505, guid: fa63edd2d9185ae4da01d28952f21586, type: 3}
-  speed: 10
 --- !u!65 &3438014160659475190
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -410,6 +396,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.166177, y: 2.2632341, z: 15.765053}
   m_Center: {x: 0.24234724, y: 1.3375254, z: -0.103832245}
+--- !u!114 &3888588686071815951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161698111833122430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c1d140320859c47a2e368eac774510, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelController: {fileID: 498380767280701505, guid: fa63edd2d9185ae4da01d28952f21586, type: 3}
+  speed: 10
 --- !u!1 &161698111983751721
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,7 +422,7 @@ GameObject:
   - component: {fileID: 161698111983751724}
   - component: {fileID: 161698111983751727}
   - component: {fileID: 161698111983751726}
-  - component: {fileID: 2126476978202079661}
+  - component: {fileID: 6686399245786329776}
   m_Layer: 0
   m_Name: BigRock (2)
   m_TagString: Untagged
@@ -508,7 +508,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2126476978202079661
+--- !u!114 &6686399245786329776
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

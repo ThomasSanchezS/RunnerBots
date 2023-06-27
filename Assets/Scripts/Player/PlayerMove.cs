@@ -59,13 +59,12 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         Vector3 velocity = rb.velocity;
-        if (canMove == true)
-        {
-            if (rb.position.x >= LevelBoundary.leftSide && rb.position.x <= LevelBoundary.rightSide)
+        
+            if(canMove == true && rb.position.x >= LevelBoundary.leftSide && rb.position.x <= LevelBoundary.rightSide)
             {
                 velocity.x = moveValue * leftRightSpeed;
                 rb.velocity = velocity;
-
+                Jump();
             }
 
             if (transform.position.x > LevelBoundary.rightSide)
@@ -75,15 +74,15 @@ public class PlayerMove : MonoBehaviour
             if (transform.position.x < LevelBoundary.leftSide)
             {
                 transform.position = new Vector3(LevelBoundary.leftSide, transform.position.y, transform.position.z);
-            }
+            }    
+    }
 
-            if (jumpPressed && isGrounded)
+    private void Jump(){
+        if (jumpPressed && isGrounded)
             {
                 rb.AddForce(Vector3.up * acceleration, ForceMode.Impulse);
                 isGrounded = false;
             }
-
-        }
     }
 
     private void OnCollisionEnter(Collision other)
@@ -92,7 +91,6 @@ public class PlayerMove : MonoBehaviour
         {
             isGrounded = true;
         }
-
     }
 
 }
