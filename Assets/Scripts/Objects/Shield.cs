@@ -6,7 +6,7 @@ public class Shield : MonoBehaviour
 {
     void OnTriggerEnter(Collider Other){
         if (Other.gameObject.tag == "Player"){
-            Other.GetComponent<State>().GetShield();
+            Other.GetComponent<PlayerManager>().GetShield();
         }
     }
 }

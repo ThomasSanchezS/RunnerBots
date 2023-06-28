@@ -21,6 +21,7 @@ public class PlayerMove : MonoBehaviour
     static public bool canMove = false;
     private Rigidbody rb;
     private bool isGrounded = true;
+    private bool noSlide = true;
 
     void Awake()
     {
@@ -61,16 +62,7 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        Vector3 velocity = rb.velocity;
-
-        if (canMove && rb.position.x >= LevelBoundary.leftSide && rb.position.x <= LevelBoundary.rightSide)
-        {
-            animator.SetBool("isRunning", true);
-            velocity.x = moveValue * leftRightSpeed;
-            rb.velocity = velocity;
-            Jump();
-            Slide();
-        }
+        
 
         if (transform.position.x > LevelBoundary.rightSide)
         {
@@ -83,13 +75,42 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-    private void Slide()
-    {
-        if (slidePressed && isGrounded)
+    private void FixedUpdate() {
+
+        Vector3 velocity = rb.velocity;
+
+        if (canMove && rb.position.x >= LevelBoundary.leftSide && rb.position.x <= LevelBoundary.rightSide)
         {
-            animator.SetTrigger("Slide");
+            animator.SetBool("isRunning", true);
+            velocity.x = moveValue * leftRightSpeed;
+            rb.velocity = velocity;
+            Jump();
+        }
+        if (slidePressed && isGrounded && noSlide)
+        {
+            StartCoroutine(Slide());
         }
     }
+
+   /** private void Slide()
+    {
+        if (slidePressed && isGrounded && noSlide)
+        {
+            noSlide = false;
+            Debug.Log("me agacho");
+            animator.SetTrigger("Slide");
+            noSlide = true;
+        }
+    }**/
+
+    IEnumerator Slide(){
+            noSlide = false;
+            Debug.Log("me agacho");
+            animator.SetTrigger("Slide");
+            yield return new WaitForSeconds(1f);
+            noSlide = true;
+    }
+
     private void Jump()
     {
         if (jumpPressed && isGrounded)

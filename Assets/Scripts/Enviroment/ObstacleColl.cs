@@ -7,15 +7,14 @@ public class ObstacleColl : MonoBehaviour
 {
     private GameObject player;
     private GameObject levelControl;
-    private GenerateLevel generateLevel;
-
+    private PlayerManager playerManager; 
 
     private void Start()
     {
         //referencia al animator del player
         player = GameObject.FindGameObjectWithTag("Player");
         levelControl = GameObject.FindGameObjectWithTag("GameController");
-        generateLevel = levelControl.GetComponent<GenerateLevel>();
+        playerManager = player.GetComponent<PlayerManager>();
     }
 
     void OnCollisionEnter(Collision other)
@@ -23,20 +22,19 @@ public class ObstacleColl : MonoBehaviour
 
         if (other.gameObject.tag == "Player")
         {
-            State state = player.GetComponent<State>();
-            if (state.shielded == true)
+            if (playerManager.shielded == true)
             {
                 Destroy(gameObject);
-                state.shielded = false;
+                playerManager.shielded = false;
             }
-            else if (state.shielded == false)
+            else if (playerManager.shielded == false)
             {
                 Debug.Log("te estrellaste gran jijueputa");
                 levelControl.GetComponent<LevelDistance>().enabled = false;
                 levelControl.GetComponent<EndRunSequence>().enabled = true;
+                player.GetComponent<PlayerMove>().enabled = false;
                 //true a un boolean de animacion
             }
-
         }
     }
 }
