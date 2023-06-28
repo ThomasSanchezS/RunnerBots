@@ -86,7 +86,7 @@ public class PlayerMove : MonoBehaviour
             rb.velocity = velocity;
             Jump();
         }
-        if (slidePressed && isGrounded && noSlide)
+        if (canMove && slidePressed && isGrounded && noSlide)
         {
             StartCoroutine(Slide());
         }

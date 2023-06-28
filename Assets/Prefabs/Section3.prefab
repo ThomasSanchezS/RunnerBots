@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6154854732909071082}
   m_Layer: 0
   m_Name: BigRock (4)
-  m_TagString: Section
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 6689920227240892823}
   m_Layer: 0
   m_Name: BigRock (1)
-  m_TagString: Section
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -235,7 +235,7 @@ GameObject:
   - component: {fileID: 8737477088267671488}
   m_Layer: 0
   m_Name: BigRock (3)
-  m_TagString: Section
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -339,7 +339,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 161698111833122431}
-  - component: {fileID: 3438014160659475190}
   - component: {fileID: 3888588686071815951}
   m_Layer: 0
   m_Name: Section3
@@ -383,19 +382,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &3438014160659475190
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 161698111833122430}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 4.166177, y: 2.2632341, z: 15.765053}
-  m_Center: {x: 0.24234724, y: 1.3375254, z: -0.103832245}
 --- !u!114 &3888588686071815951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,7 +395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelController: {fileID: 498380767280701505, guid: fa63edd2d9185ae4da01d28952f21586, type: 3}
-  speed: 10
+  speed: 6
 --- !u!1 &161698111983751721
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,7 +411,7 @@ GameObject:
   - component: {fileID: 6686399245786329776}
   m_Layer: 0
   m_Name: BigRock (2)
-  m_TagString: Section
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

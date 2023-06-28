@@ -7,7 +7,8 @@ public class ObstacleColl : MonoBehaviour
 {
     private GameObject player;
     private GameObject levelControl;
-    private PlayerManager playerManager; 
+    private PlayerManager playerManager;
+
     private GameObject section;
     private MoveAndDestroy moveAndDestroyScript;
 
@@ -19,11 +20,12 @@ public class ObstacleColl : MonoBehaviour
         playerManager = player.GetComponent<PlayerManager>();
         section = GameObject.FindGameObjectWithTag("Section");
         moveAndDestroyScript = section.GetComponent<MoveAndDestroy>();
+
     }
 
-    void OnCollisionEnter(Collision other)
-    {
 
+    private void OnCollisionEnter(Collision other)
+    {
         if (other.gameObject.tag == "Player")
         {
             if (playerManager.shielded == true)
@@ -33,12 +35,12 @@ public class ObstacleColl : MonoBehaviour
             }
             else
             {
+                moveAndDestroyScript.crashed = true;
                 Debug.Log("te estrellaste gran jijueputa");
-                levelControl.GetComponent<LevelDistance>().enabled = false;
+                levelControl.GetComponent<LevelDistance>().enabled = false;  
                 levelControl.GetComponent<EndRunSequence>().enabled = true;
                 player.GetComponent<PlayerMove>().enabled = false;
-                moveAndDestroyScript.crashed = true;
-                Debug.Log(moveAndDestroyScript.crashed);
+
                 //true a un boolean de animacion
             }
         }
