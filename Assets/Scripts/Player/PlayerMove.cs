@@ -18,7 +18,7 @@ public class PlayerMove : MonoBehaviour
     public bool slidePressed;
     public float leftRightSpeed = 4f;
     public float acceleration = 5f;
-    static public bool canMove = false;
+    static public bool canMove {get; set;}
     private Rigidbody rb;
     private bool isGrounded = true;
     private bool noSlide = true;
@@ -41,6 +41,7 @@ public class PlayerMove : MonoBehaviour
 
     void Start()
     {
+        canMove = false;
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
     }
@@ -62,7 +63,6 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        
 
         if (transform.position.x > LevelBoundary.rightSide)
         {
@@ -127,6 +127,11 @@ public class PlayerMove : MonoBehaviour
         {
             isGrounded = true;
         }
+    }
+    public void SetCanMove()
+    {
+        canMove = false;
+
     }
 
 }
