@@ -15,17 +15,18 @@ public class ObstacleColl : MonoBehaviour
     private void Start()
     {
         //referencia al animator del player
-        player = GameObject.FindGameObjectWithTag("Player");
-        levelControl = GameObject.FindGameObjectWithTag("GameController");
-        playerManager = player.GetComponent<PlayerManager>();
-        section = GameObject.FindGameObjectWithTag("Section");
-        moveAndDestroyScript = section.GetComponent<MoveAndDestroy>();
 
     }
 
 
     private void OnCollisionEnter(Collision other)
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        levelControl = GameObject.FindGameObjectWithTag("GameController");
+        playerManager = player.GetComponent<PlayerManager>();
+        section = GameObject.FindGameObjectWithTag("Section");
+        moveAndDestroyScript = section.GetComponent<MoveAndDestroy>();
+        
         if (other.gameObject.tag == "Player")
         {
             if (playerManager.shielded == true)
@@ -37,7 +38,7 @@ public class ObstacleColl : MonoBehaviour
             {
                 moveAndDestroyScript.crashed = true;
                 Debug.Log("te estrellaste gran jijueputa");
-                levelControl.GetComponent<LevelDistance>().enabled = false;  
+                levelControl.GetComponent<LevelDistance>().enabled = false;
                 levelControl.GetComponent<EndRunSequence>().enabled = true;
                 player.GetComponent<PlayerMove>().enabled = false;
 
