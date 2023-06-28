@@ -8,14 +8,12 @@ public class GenerateLevel : MonoBehaviour
     public float zPos = 30f;
     private bool creatingSection = false;
     public int secNum;
-    public bool keepMoving = false;
 
     public void GenerateSection()
     {
-        if(keepMoving == true){
-            secNum = Random.Range(0, 3);
-            Instantiate(section[secNum], new Vector3(0, 0, zPos), Quaternion.identity);
-            creatingSection = false;
-        }
+        secNum = Random.Range(0, 3);
+        Instantiate(section[secNum], new Vector3(0, 0, zPos), Quaternion.identity);
+        creatingSection = false;
+
     }
 }

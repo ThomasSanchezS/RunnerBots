@@ -7,7 +7,6 @@ public class MoveAndDestroy : MonoBehaviour
     public GameObject levelController;
     private GenerateLevel generateLevel;
     private EndRunSequence endSequenceScript; 
-    private bool keepMoving = false; 
     
     
     public float speed = 10f;
@@ -21,15 +20,11 @@ public class MoveAndDestroy : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        keepMoving = generateLevel.keepMoving;
-        Debug.Log(keepMoving);
-        if(keepMoving == true)
-        {
+    void FixedUpdate()
+    {   
             transform.Translate(Vector3.back * Time.deltaTime * speed, Space.World);
 
-            if(transform.position.z < -5 && transform.position.z > -5.2 && noRepeating)
+            if(transform.position.z < -8 && transform.position.z > -8.2 && noRepeating)
             {
             StartCoroutine(CreateSection());
             }
@@ -37,19 +32,14 @@ public class MoveAndDestroy : MonoBehaviour
             {
             Destroy(gameObject);
             }
-
-        } else if(keepMoving == false){
-
-            StopCoroutine(CreateSection());
-        }
         
     }
 
     IEnumerator CreateSection()
     {
         noRepeating = false;
-        yield return new WaitForSeconds(1f);
         generateLevel.GenerateSection();
+        yield return new WaitForSeconds(2f);
         Debug.Log("Started Creating Section");
         noRepeating = true;
     

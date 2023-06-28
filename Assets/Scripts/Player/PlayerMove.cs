@@ -6,6 +6,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerMove : MonoBehaviour
 {
+
+    private Animator animator;
     public InputActionAsset playerActions;
     private InputActionMap player;
     private InputAction move;
@@ -38,6 +40,7 @@ public class PlayerMove : MonoBehaviour
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
     }
 
@@ -59,30 +62,42 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         Vector3 velocity = rb.velocity;
-        
-            if(canMove == true && rb.position.x >= LevelBoundary.leftSide && rb.position.x <= LevelBoundary.rightSide)
-            {
-                velocity.x = moveValue * leftRightSpeed;
-                rb.velocity = velocity;
-                Jump();
-            }
 
-            if (transform.position.x > LevelBoundary.rightSide)
-            {
-                transform.position = new Vector3(LevelBoundary.rightSide, transform.position.y, transform.position.z);
-            }
-            if (transform.position.x < LevelBoundary.leftSide)
-            {
-                transform.position = new Vector3(LevelBoundary.leftSide, transform.position.y, transform.position.z);
-            }    
+        if (canMove && rb.position.x >= LevelBoundary.leftSide && rb.position.x <= LevelBoundary.rightSide)
+        {
+            animator.SetBool("isRunning", true);
+            velocity.x = moveValue * leftRightSpeed;
+            rb.velocity = velocity;
+            Jump();
+            Slide();
+        }
+
+        if (transform.position.x > LevelBoundary.rightSide)
+        {
+            transform.position = new Vector3(LevelBoundary.rightSide, transform.position.y, transform.position.z);
+        }
+        if (transform.position.x < LevelBoundary.leftSide)
+        {
+            animator.SetBool("isRunning", true);
+            transform.position = new Vector3(LevelBoundary.leftSide, transform.position.y, transform.position.z);
+        }
     }
 
-    private void Jump(){
+    private void Slide()
+    {
+        if (slidePressed && isGrounded)
+        {
+            animator.SetTrigger("Slide");
+        }
+    }
+    private void Jump()
+    {
         if (jumpPressed && isGrounded)
-            {
-                rb.AddForce(Vector3.up * acceleration, ForceMode.Impulse);
-                isGrounded = false;
-            }
+        {
+            animator.SetTrigger("jump");
+            rb.AddForce(Vector3.up * acceleration, ForceMode.Impulse);
+            isGrounded = false;
+        }
     }
 
     private void OnCollisionEnter(Collision other)
