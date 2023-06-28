@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6154854732909071082}
   m_Layer: 0
   m_Name: BigRock (4)
-  m_TagString: Untagged
+  m_TagString: Section
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 6689920227240892823}
   m_Layer: 0
   m_Name: BigRock (1)
-  m_TagString: Untagged
+  m_TagString: Section
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -235,7 +235,7 @@ GameObject:
   - component: {fileID: 8737477088267671488}
   m_Layer: 0
   m_Name: BigRock (3)
-  m_TagString: Untagged
+  m_TagString: Section
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 3888588686071815951}
   m_Layer: 0
   m_Name: Section3
-  m_TagString: Untagged
+  m_TagString: Section
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -425,7 +425,7 @@ GameObject:
   - component: {fileID: 6686399245786329776}
   m_Layer: 0
   m_Name: BigRock (2)
-  m_TagString: Untagged
+  m_TagString: Section
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
