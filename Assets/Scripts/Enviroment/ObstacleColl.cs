@@ -18,15 +18,23 @@ public class ObstacleColl : MonoBehaviour
 
     }
 
+    private GameObject[] sections;
+    private List<MoveAndDestroy> moveAndDestroyScripts = new List<MoveAndDestroy>();
 
     private void OnCollisionEnter(Collision other)
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        sections = GameObject.FindGameObjectsWithTag("Section");
+        foreach (GameObject section in sections)
+        {
+            moveAndDestroyScripts.Add(section.GetComponent<MoveAndDestroy>());
+        }
+        Debug.Log(sections.Length);
         levelControl = GameObject.FindGameObjectWithTag("GameController");
         playerManager = player.GetComponent<PlayerManager>();
         section = GameObject.FindGameObjectWithTag("Section");
-        moveAndDestroyScript = section.GetComponent<MoveAndDestroy>();
-        
+        // moveAndDestroyScript = section.GetComponent<MoveAndDestroy>();
+
         if (other.gameObject.tag == "Player")
         {
             if (playerManager.shielded == true)
@@ -36,7 +44,11 @@ public class ObstacleColl : MonoBehaviour
             }
             else
             {
-                moveAndDestroyScript.crashed = true;
+                foreach (MoveAndDestroy moveAndDestroyScript in moveAndDestroyScripts)
+                {
+                    moveAndDestroyScript.crashed = true;
+                }
+                // moveAndDestroyScript.crashed = true;
                 Debug.Log("te estrellaste gran jijueputa");
                 levelControl.GetComponent<LevelDistance>().enabled = false;
                 levelControl.GetComponent<EndRunSequence>().enabled = true;
