@@ -65,20 +65,20 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
 
-        if (transform.position.x > 2)
+        if (transform.position.x > 3)
         {
-            transform.position = new Vector3(2, transform.position.y, transform.position.z);
+            transform.position = new Vector3(3, transform.position.y, transform.position.z);
         }
-        if (transform.position.x < -2)
+        if (transform.position.x < -3)
         {
-            transform.position = new Vector3(-2, transform.position.y, transform.position.z);
+            transform.position = new Vector3(-3, transform.position.y, transform.position.z);
         }
     }
 
     private void FixedUpdate()
     {
 
-        if (canMove && rb.position.x >= -2 && rb.position.x <= 2)
+        if (canMove && rb.position.x >= -3 && rb.position.x <= 3)
         {
             animator.SetBool("isRunning", true);
             transform.Translate(Vector3.right * moveValue * leftRightSpeed * Time.deltaTime);
