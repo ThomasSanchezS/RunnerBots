@@ -18,10 +18,11 @@ public class PlayerMove : MonoBehaviour
     public bool slidePressed;
     public float leftRightSpeed = 4f;
     public float acceleration = 5f;
-    static public bool canMove {get; set;}
+    static public bool canMove { get; set; }
     private Rigidbody rb;
     private bool isGrounded = true;
     private bool noSlide = true;
+    private bool canJump = true;
 
     void Awake()
     {
@@ -64,74 +65,75 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
 
-        if (transform.position.x > LevelBoundary.rightSide)
+        if (transform.position.x > 2)
         {
-            transform.position = new Vector3(LevelBoundary.rightSide, transform.position.y, transform.position.z);
+            transform.position = new Vector3(2, transform.position.y, transform.position.z);
         }
-        if (transform.position.x < LevelBoundary.leftSide)
+        if (transform.position.x < -2)
         {
-            animator.SetBool("isRunning", true);
-            transform.position = new Vector3(LevelBoundary.leftSide, transform.position.y, transform.position.z);
+            transform.position = new Vector3(-2, transform.position.y, transform.position.z);
         }
     }
 
-    private void FixedUpdate() {
+    private void FixedUpdate()
+    {
 
-        Vector3 velocity = rb.velocity;
-
-        if (canMove && rb.position.x >= LevelBoundary.leftSide && rb.position.x <= LevelBoundary.rightSide)
+        if (canMove && rb.position.x >= -2 && rb.position.x <= 2)
         {
             animator.SetBool("isRunning", true);
-            velocity.x = moveValue * leftRightSpeed;
-            rb.velocity = velocity;
-            Jump();
+            transform.Translate(Vector3.right * moveValue * leftRightSpeed * Time.deltaTime);
+            
+        }
+
+        if (canMove && jumpPressed && canJump)
+        {
+            StartCoroutine(Jump());
         }
         if (canMove && slidePressed && isGrounded && noSlide)
         {
             StartCoroutine(Slide());
         }
+
     }
 
-   /** private void Slide()
+    /** private void Slide()
+     {
+         if (slidePressed && isGrounded && noSlide)
+         {
+             noSlide = false;
+             Debug.Log("me agacho");
+             animator.SetTrigger("Slide");
+             noSlide = true;
+         }
+     }**/
+
+    IEnumerator Slide()
     {
-        if (slidePressed && isGrounded && noSlide)
-        {
-            noSlide = false;
-            Debug.Log("me agacho");
-            animator.SetTrigger("Slide");
-            noSlide = true;
-        }
-    }**/
-
-    IEnumerator Slide(){
-            noSlide = false;
-            Debug.Log("me agacho");
-            animator.SetTrigger("Slide");
-            yield return new WaitForSeconds(1f);
-            noSlide = true;
+        noSlide = false;
+        Debug.Log("me agacho");
+        animator.SetTrigger("Slide");
+        yield return new WaitForSeconds(1f);
+        noSlide = true;
     }
 
-    private void Jump()
+    IEnumerator Jump()
     {
-        if (jumpPressed && isGrounded)
-        {
-            animator.SetTrigger("jump");
-            rb.AddForce(Vector3.up * acceleration, ForceMode.Impulse);
-            isGrounded = false;
-        }
+        canJump = false;
+        animator.SetTrigger("jump");
+        yield return new WaitForSeconds(0.3f);
+        rb.AddForce(Vector3.up * acceleration, ForceMode.Impulse);
+        canJump = true;
+
     }
 
-    private void OnCollisionEnter(Collision other)
+    void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
+            Debug.Log("estoy en el suelo");
+
         }
     }
-    public void SetCanMove()
-    {
-        canMove = false;
-
-    }
-
 }
+
