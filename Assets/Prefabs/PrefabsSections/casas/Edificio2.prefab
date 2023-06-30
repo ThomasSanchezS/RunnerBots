@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3164831574959964160}
   - component: {fileID: 2036865192819871653}
   - component: {fileID: 4296593817486900079}
-  - component: {fileID: 6204411620891870955}
   - component: {fileID: 6568784298324324419}
   m_Layer: 0
   m_Name: Edificio2
@@ -88,18 +87,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6204411620891870955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2350998990731713210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2eee8ee331c23bb4eaf92c844839ced8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &6568784298324324419
 BoxCollider:
   m_ObjectHideFlags: 0

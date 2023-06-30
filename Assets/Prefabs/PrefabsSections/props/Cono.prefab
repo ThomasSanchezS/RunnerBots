@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4140186037150638669}
   - component: {fileID: 2202280052118623879}
   - component: {fileID: 3204195402800664995}
-  - component: {fileID: 4452291827248731477}
   m_Layer: 0
   m_Name: Cono
   m_TagString: Obstacle
@@ -99,15 +98,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0048993253, y: 0.0048993174, z: 0.0042716237}
   m_Center: {x: 0.000000014784745, y: 0.0000000037252896, z: 0.0021358118}
---- !u!114 &4452291827248731477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 401082575610328914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2eee8ee331c23bb4eaf92c844839ced8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

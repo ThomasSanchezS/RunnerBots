@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6671219018048528329}
   - component: {fileID: 7726828738852409452}
   - component: {fileID: 5539359944274551974}
-  - component: {fileID: 3532299111027974059}
   - component: {fileID: 5396610252354759191}
   m_Layer: 0
   m_Name: Casa1
@@ -88,18 +87,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &3532299111027974059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6331848825093522803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2eee8ee331c23bb4eaf92c844839ced8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &5396610252354759191
 BoxCollider:
   m_ObjectHideFlags: 0

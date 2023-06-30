@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1774017732001573830}
   - component: {fileID: 3400578560933340259}
   - component: {fileID: 636625370525552809}
-  - component: {fileID: 1633600402885465167}
   - component: {fileID: 5057189327839363827}
   m_Layer: 0
   m_Name: Bus
@@ -91,18 +90,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1633600402885465167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429122222815113596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2eee8ee331c23bb4eaf92c844839ced8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &5057189327839363827
 BoxCollider:
   m_ObjectHideFlags: 0

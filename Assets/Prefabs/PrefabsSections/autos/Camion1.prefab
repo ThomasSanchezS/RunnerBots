@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4496124921609297873}
   - component: {fileID: 705563613217329268}
   - component: {fileID: 3327699531768947902}
-  - component: {fileID: 4559843033806957564}
   - component: {fileID: 8935297937431315502}
   m_Layer: 0
   m_Name: Camion1
@@ -92,18 +91,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4559843033806957564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3832177800601519467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2eee8ee331c23bb4eaf92c844839ced8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &8935297937431315502
 BoxCollider:
   m_ObjectHideFlags: 0

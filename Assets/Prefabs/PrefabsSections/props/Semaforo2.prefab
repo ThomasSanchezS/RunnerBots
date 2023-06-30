@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7303716691250922563}
   - component: {fileID: 5977358861388303334}
   - component: {fileID: 8437264648973434668}
-  - component: {fileID: 2974259736441526856}
   - component: {fileID: 2677484725664857792}
   m_Layer: 0
   m_Name: Semaforo2
@@ -88,18 +87,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2974259736441526856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7933041329220230905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2eee8ee331c23bb4eaf92c844839ced8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &2677484725664857792
 BoxCollider:
   m_ObjectHideFlags: 0

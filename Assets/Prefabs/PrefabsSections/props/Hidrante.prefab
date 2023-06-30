@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8545931072048962768}
   - component: {fileID: 4699194625888129909}
   - component: {fileID: 7409006140587796415}
-  - component: {fileID: 2837920342070133710}
   - component: {fileID: 4972443101231519992}
   m_Layer: 0
   m_Name: Hidrante
@@ -86,18 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2837920342070133710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9066572490637297258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2eee8ee331c23bb4eaf92c844839ced8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &4972443101231519992
 BoxCollider:
   m_ObjectHideFlags: 0

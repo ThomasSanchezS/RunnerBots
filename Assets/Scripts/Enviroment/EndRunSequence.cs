@@ -5,10 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class EndRunSequence : MonoBehaviour
 {
+    public static EndRunSequence instance;
     public GameObject liveTickets;
     public GameObject liveDis;
     public GameObject endScreen;
     public GameObject fadeOut;
+
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else{
+            Destroy(gameObject);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()

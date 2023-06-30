@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8061033952448747331}
   - component: {fileID: 5204609630558413705}
   - component: {fileID: 7254174564091852936}
-  - component: {fileID: 177551114108140726}
   m_Layer: 0
   m_Name: Arbusto
   m_TagString: Obstacle
@@ -100,15 +99,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.01838887, y: 0.012420015, z: 0.007198108}
   m_Center: {x: 0.0004031871, y: -0.0013559719, z: 0.0035259211}
---- !u!114 &177551114108140726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5997247220341883484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2eee8ee331c23bb4eaf92c844839ced8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

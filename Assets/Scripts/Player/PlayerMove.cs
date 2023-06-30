@@ -85,9 +85,9 @@ public class PlayerMove : MonoBehaviour
             
         }
 
-        if (canMove && jumpPressed && canJump)
+        if (canMove && jumpPressed)
         {
-            StartCoroutine(Jump());
+            Jump();
         }
         if (canMove && slidePressed && isGrounded && noSlide)
         {
@@ -116,13 +116,14 @@ public class PlayerMove : MonoBehaviour
         noSlide = true;
     }
 
-    IEnumerator Jump()
+    private void Jump()
     {
-        canJump = false;
+        if(isGrounded){
         animator.SetTrigger("jump");
-        yield return new WaitForSeconds(0.3f);
         rb.AddForce(Vector3.up * acceleration, ForceMode.Impulse);
         canJump = true;
+        isGrounded = false;
+        }
 
     }
 

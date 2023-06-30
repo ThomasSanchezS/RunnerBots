@@ -4,25 +4,15 @@ using UnityEngine;
 
 public class MoveAndDestroy : MonoBehaviour
 {
-    public GameObject levelController;
-    private GenerateLevel generateLevel;
-    private EndRunSequence endSequenceScript; 
-    public bool crashed{get; set;}
-
+    
     public float speed = 10f;
     private bool noRepeating = true;
 
-    void Start()
-    {
-        generateLevel = levelController.GetComponent<GenerateLevel>();
-        endSequenceScript = levelController.GetComponent<EndRunSequence>();
-        crashed = false;
-    }
 
     // Update is called once per frame
     void FixedUpdate()
     {   
-        if(crashed == false){
+        if(!GameManager.Instance.gameOver){
             transform.Translate(Vector3.back * Time.deltaTime * speed, Space.World);
 
             if(transform.position.z < -10 && transform.position.z > -10.2 && noRepeating)
@@ -41,7 +31,7 @@ public class MoveAndDestroy : MonoBehaviour
     IEnumerator CreateSection()
     {
         noRepeating = false;
-        generateLevel.GenerateSection();
+        GenerateLevel.instance.GenerateSection();
         yield return new WaitForSeconds(2f);
         Debug.Log("Started Creating Section");
         noRepeating = true;

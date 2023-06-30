@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6161813393455252975}
   - component: {fileID: 8243803845805076773}
   - component: {fileID: 8348877808869044112}
-  - component: {fileID: 9055957104974637955}
   m_Layer: 0
   m_Name: Semaforo1
   m_TagString: Obstacle
@@ -100,15 +99,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.001957375, y: 0.0015282755, z: 0.028510148}
   m_Center: {x: -0.0003168799, y: -7.9740725e-10, z: 0.014255076}
---- !u!114 &9055957104974637955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7595078447988887792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2eee8ee331c23bb4eaf92c844839ced8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

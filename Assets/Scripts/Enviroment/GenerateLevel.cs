@@ -4,10 +4,23 @@ using UnityEngine;
 
 public class GenerateLevel : MonoBehaviour
 {
+    public static GenerateLevel instance;
     public GameObject[] section;
     public float zPos = 30f;
     private bool creatingSection = false;
     public int secNum;
+
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     public void GenerateSection()
     {
