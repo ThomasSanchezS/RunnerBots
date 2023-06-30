@@ -15,7 +15,7 @@ public class MoveAndDestroy : MonoBehaviour
         if(!GameManager.Instance.gameOver){
             transform.Translate(Vector3.back * Time.deltaTime * speed, Space.World);
 
-            if(transform.position.z < -10 && transform.position.z > -10.2 && noRepeating)
+            if(transform.position.z < -12 && transform.position.z > -12.2 && noRepeating)
             {
             StartCoroutine(CreateSection());
             }

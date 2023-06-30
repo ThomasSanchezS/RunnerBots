@@ -80,6 +80,7 @@ public class PlayerMove : MonoBehaviour
 
         if (canMove && rb.position.x >= -3 && rb.position.x <= 3)
         {
+            
             animator.SetBool("isRunning", true);
             transform.Translate(Vector3.right * moveValue * leftRightSpeed * Time.deltaTime);
             
