@@ -50,6 +50,7 @@ public class ObstacleColl : MonoBehaviour
                 }
                 // moveAndDestroyScript.crashed = true;
                 Debug.Log("te estrellaste gran jijueputa");
+                PlayerMove.canMove = false;
                 levelControl.GetComponent<LevelDistance>().enabled = false;
                 levelControl.GetComponent<EndRunSequence>().enabled = true;
                 player.GetComponent<PlayerMove>().enabled = false;
