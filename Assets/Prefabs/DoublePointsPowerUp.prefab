@@ -113,3 +113,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDouble: 0
   levelController: {fileID: 0}
+  duplicatePoints: {fileID: 8300000, guid: e49906974ceb9ed45b81d53b4dea50d9, type: 3}

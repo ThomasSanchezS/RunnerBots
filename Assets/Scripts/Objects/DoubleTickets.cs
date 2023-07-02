@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class DoubleTickets : MonoBehaviour
 {
+    public AudioClip doubleTicketsSound;
     // Start is called before the first frame updat
 
     void OnTriggerEnter(Collider other){
-
+        
+        AudioSource.PlayClipAtPoint(doubleTicketsSound, transform.position);
+        Destroy(gameObject);
         StartCoroutine(DuplicateTickets());
     }
 

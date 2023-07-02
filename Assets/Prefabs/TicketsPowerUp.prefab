@@ -110,3 +110,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d74e90996fef4474093a2f5d520ab3a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doubleTicketsSound: {fileID: 8300000, guid: d8ba0340bf6dac748bd1fe229a47f709, type: 3}

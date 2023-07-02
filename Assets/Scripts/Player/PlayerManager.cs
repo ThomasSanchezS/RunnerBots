@@ -8,20 +8,23 @@ public class PlayerManager : MonoBehaviour
     public bool crashed { get; set; }
     private Animator playerAnimator;
     private PlayerMove playerMove;
+    private AudioSource failAudio;
 
     private void Start()
     {
         playerAnimator = GetComponent<Animator>();
-
+        failAudio = GetComponent<AudioSource>();
     }
     // Start is called before the first frame update
     public void GetShield()
     {
         shielded = true;
+        StartCoroutine(BrakeShield());
     }
 
-    public void BrakeShield()
+    public IEnumerator BrakeShield()
     {
+        yield return new WaitForSeconds(5);
         shielded = false;
     }
 
@@ -37,6 +40,7 @@ public class PlayerManager : MonoBehaviour
             }
             else
             {
+                failAudio.Play();
                 PlayerMove.canMove = false;
                 GameManager.Instance.gameOver = true;
                 playerAnimator.SetBool("isRunning", false);
