@@ -9,11 +9,13 @@ public class PlayerManager : MonoBehaviour
     private Animator playerAnimator;
     private PlayerMove playerMove;
     private AudioSource failAudio;
+    private ParticleSystem playerParticles;
 
     private void Start()
     {
         playerAnimator = GetComponent<Animator>();
         failAudio = GetComponent<AudioSource>();
+        playerParticles = GetComponent<ParticleSystem>();
     }
     // Start is called before the first frame update
     public void GetShield()
@@ -41,6 +43,7 @@ public class PlayerManager : MonoBehaviour
             else
             {
                 failAudio.Play();
+                playerParticles.Stop();
                 PlayerMove.canMove = false;
                 GameManager.Instance.gameOver = true;
                 playerAnimator.SetBool("isRunning", false);

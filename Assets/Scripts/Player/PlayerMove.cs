@@ -23,6 +23,8 @@ public class PlayerMove : MonoBehaviour
     private bool isGrounded = true;
     private bool noSlide = true;
     private bool canJump = true;
+    private ParticleSystem playerParticles;
+    
 
     void Awake()
     {
@@ -30,7 +32,6 @@ public class PlayerMove : MonoBehaviour
         move = player.FindAction("Movement");
         jump = player.FindAction("Jump");
         slide = player.FindAction("Slide");
-
         move.performed += ctx => moveValue = ctx.ReadValue<float>();
         move.canceled += ctx => moveValue = 0;
 
@@ -42,6 +43,7 @@ public class PlayerMove : MonoBehaviour
 
     void Start()
     {
+        playerParticles = GetComponent<ParticleSystem>();
         canMove = false;
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
@@ -80,10 +82,11 @@ public class PlayerMove : MonoBehaviour
 
         if (canMove && rb.position.x >= -3 && rb.position.x <= 3)
         {
-            
             animator.SetBool("isRunning", true);
             transform.Translate(Vector3.right * moveValue * leftRightSpeed * Time.deltaTime);
-            
+            if(!playerParticles.isPlaying){
+                playerParticles.Play();
+            }
         }
 
         if (canMove && jumpPressed)
