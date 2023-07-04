@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
     private Vector3 posLeftUp = new Vector3(-10, 10, 0);
     private List<Vector3> positions = new List<Vector3>();
     private AudioSource shootAudio;
+    private Animator enemyAnimator;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,7 @@ public class Enemy : MonoBehaviour
         positions.Add(posLeftUp);
         positions.Add(posRightDown);
         positions.Add(posRightUp);
+        enemyAnimator = GetComponent<Animator>();
 
         projectilesLength = projectiles.Count;
         startPos = transform.position;
@@ -61,6 +63,7 @@ public class Enemy : MonoBehaviour
     {
         randomProjectile = Random.Range(0, projectilesLength);
         shootAudio.Play();
+        enemyAnimator.SetTrigger("Shoot");
         Instantiate(projectiles[randomProjectile], transform.position, Quaternion.identity);
     }
 
