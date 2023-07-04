@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    private GameObject player;
     private Animator animator;
     public List<GameObject> projectiles = new List<GameObject>();
     private float life = 10.0f;
@@ -23,6 +24,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("Player");
         animator = GameObject.Find("CameraMoveAnimator").GetComponent<Animator>();
         shootAudio = GetComponent<AudioSource>();
         positions.Add(posLeftDown);
@@ -35,7 +37,8 @@ public class Enemy : MonoBehaviour
         startPos = transform.position;
         InvokeRepeating("RandomMultiplier", 2f, 3f);
         InvokeRepeating("InvokingProjectiles", 3f, 2f);
-        InvokeRepeating("PosChanger", 6f, 6f);
+        InvokeRepeating("PosChanger", 6f, 4f);
+        InvokeRepeating("LifeDecrease", 3f, 3f);
     }
 
     // Update is called once per frame
@@ -45,17 +48,25 @@ public class Enemy : MonoBehaviour
         {
             transform.position = startPos;
         }
-        transform.Translate(Vector3.forward * random * Time.deltaTime);
+        transform.Translate(Vector3.forward * random * Time.deltaTime, Space.World);
 
         if (life < 1)
         {
-            animator.SetBool("normal",true);
+            GameManager.Instance.bossOnScene = false;
+            animator.SetBool("downRight", false);
+            animator.SetBool("upLeft", false);
+            animator.SetBool("downLeft", false);
+            animator.SetBool("upRight", false);
+            animator.SetBool("normal", true);
             Destroy(gameObject);
         }
     }
+    private void LifeDecrease()
+    {
+        life--;
+    }
     private void RandomMultiplier()
     {
-        ;
         random = Random.Range(-9, 10);
     }
 
@@ -99,5 +110,6 @@ public class Enemy : MonoBehaviour
                 break;
         }
         transform.position = startPos;
+        transform.LookAt(player.transform);
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    public GameObject player;
     public GameObject camAnimator;
     private Animator animator;
     public GameObject enemy;
@@ -25,11 +26,19 @@ public class EnemySpawner : MonoBehaviour
         positions.Add(posRightDown);
         positions.Add(posRightUp);
 
-        InvokeRepeating("CreateEnemy", 30f, 30f);
+        InvokeRepeating("CreateEnemy", 30f, 60f);
     }
     private void CreateEnemy()
     {
 
+        GameObject[] sectionsLoaded = GameObject.FindGameObjectsWithTag("Section");
+        foreach (GameObject section in sectionsLoaded)
+        {
+            Destroy(section);
+        
+        }
+        GameManager.Instance.bossOnScene = true;
+        GenerateLevel.instance.GenerateSection();
         enemyCount = GameObject.FindObjectsOfType<Enemy>().Length;
         Debug.Log(enemyCount);
 
@@ -37,7 +46,8 @@ public class EnemySpawner : MonoBehaviour
         {
             randomPos = Random.Range(0, 4);
             pos = positions[randomPos];
-            Instantiate(enemy, pos, Quaternion.identity);
+            GameObject enemyInstance = Instantiate(enemy, pos, Quaternion.identity);
+            enemyInstance.transform.LookAt(player.transform);
             switch (pos)
             {
                 case var value when value == posLeftDown:

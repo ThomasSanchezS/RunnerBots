@@ -125,11 +125,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36b6af9616cc22e48a73c00976b4ec3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossSection:
+  - {fileID: 2854451236693998790, guid: 8d13baf2f14a03049a248ee9bbc40832, type: 3}
+  - {fileID: 3413246523712025724, guid: 1420b89057fdf9048a4c7bc7d09529c3, type: 3}
+  - {fileID: 161698111833122430, guid: d4d2240a644ba6649a4901e69b11df3d, type: 3}
   section:
   - {fileID: 2854451236693998790, guid: 4fd3e2440bc2fae48bed34f428a8724d, type: 3}
   - {fileID: 3413246523712025724, guid: 277f66b08bc99c04bbd6056eec920761, type: 3}
   - {fileID: 161698111833122430, guid: 116b3afa54793504ab5c77ec54ae2e56, type: 3}
-  zPos: 20
+  zPos: 30
   secNum: 0
 --- !u!114 &498380767280701629
 MonoBehaviour:

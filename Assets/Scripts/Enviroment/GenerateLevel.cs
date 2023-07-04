@@ -5,8 +5,9 @@ using UnityEngine;
 public class GenerateLevel : MonoBehaviour
 {
     public static GenerateLevel instance;
+    public GameObject[] bossSection;
     public GameObject[] section;
-    public float zPos = 30f;
+    public float zPos = 35f;
     private bool creatingSection = false;
     public int secNum;
 
@@ -25,7 +26,14 @@ public class GenerateLevel : MonoBehaviour
     public void GenerateSection()
     {
         secNum = Random.Range(0, 3);
-        Instantiate(section[secNum], new Vector3(0, 0, zPos), Quaternion.identity);
+        if (GameManager.Instance.bossOnScene == false)
+        {
+            Instantiate(section[secNum], new Vector3(0, 0, zPos), Quaternion.identity);
+        }
+        else{
+            Instantiate(bossSection[secNum], new Vector3(0, 0, zPos), Quaternion.identity);
+        
+        }
         creatingSection = false;
 
     }
