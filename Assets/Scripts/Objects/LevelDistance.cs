@@ -15,7 +15,7 @@ public class LevelDistance : MonoBehaviour
 
     void Update()
     {
-        if(addingDis == false)
+        if(addingDis == false && PlayerMove.canMove)
         {
             addingDis = true;
             StartCoroutine(AddingDis());
