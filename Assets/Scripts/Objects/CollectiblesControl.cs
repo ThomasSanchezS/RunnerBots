@@ -13,7 +13,7 @@ public class CollectiblesControl : MonoBehaviour
 
     void Update()
     {
-        ticketsUI.text = "Tickets: " + ticketsCount.ToString();
-        ticketsEndDisplay.text = "Tickets: " + ticketsCount.ToString();
+        ticketsUI.text = "Discs: " + ticketsCount.ToString();
+        ticketsEndDisplay.text = "Discs: " + ticketsCount.ToString();
     }
 }
