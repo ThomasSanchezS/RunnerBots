@@ -10,6 +10,7 @@ public class PlayerManager : MonoBehaviour
     private PlayerMove playerMove;
     private AudioSource failAudio;
     private ParticleSystem playerParticles;
+    public GameObject shieldParticles;
 
     private void Start()
     {
@@ -20,6 +21,7 @@ public class PlayerManager : MonoBehaviour
     // Start is called before the first frame update
     public void GetShield()
     {
+        shieldParticles.SetActive(true);
         shielded = true;
         StartCoroutine(BrakeShield());
     }
@@ -27,6 +29,7 @@ public class PlayerManager : MonoBehaviour
     public IEnumerator BrakeShield()
     {
         yield return new WaitForSeconds(5);
+        shieldParticles.SetActive(false);
         shielded = false;
     }
 
