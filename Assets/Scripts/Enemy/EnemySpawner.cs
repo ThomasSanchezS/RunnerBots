@@ -11,10 +11,10 @@ public class EnemySpawner : MonoBehaviour
     private int enemyCount;
     private int randomPos;
     private Vector3 pos;
-    private Vector3 posRightDown = new Vector3(10, 1, 0);
-    private Vector3 posRightUp = new Vector3(10, 10, 0);
-    private Vector3 posLeftDown = new Vector3(-10, 1, 0);
-    private Vector3 posLeftUp = new Vector3(-10, 10, 0);
+    private Vector3 posRightDown = new Vector3(7, 1, -10);
+    private Vector3 posRightUp = new Vector3(10, 8, -10);
+    private Vector3 posLeftDown = new Vector3(-7, 1, -10);
+    private Vector3 posLeftUp = new Vector3(-10, 8, -10);
     private List<Vector3> positions = new List<Vector3>();
     // Start is called before the first frame update
     void Start()

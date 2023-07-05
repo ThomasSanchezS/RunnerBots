@@ -159,6 +159,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cono (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bb53b52043a75274b8ac675ab77676f6, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb53b52043a75274b8ac675ab77676f6, type: 3}
 --- !u!4 &516598053655945793 stripped
@@ -166,6 +170,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bb53b52043a75274b8ac675ab77676f6, type: 3}
   m_PrefabInstance: {fileID: 45575084083987882}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &891857439998245115 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bb53b52043a75274b8ac675ab77676f6, type: 3}
+  m_PrefabInstance: {fileID: 45575084083987882}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2189857834039371336
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891857439998245115}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0048993253, y: 0.0048993174, z: 0.0042716237}
+  m_Center: {x: 0.000000014784745, y: 0.0000000037252896, z: 0.0021358118}
 --- !u!1001 &206431573007759301
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1933,6 +1955,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bomberos
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e7a514641cdd67542a67e011572a45c0, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a514641cdd67542a67e011572a45c0, type: 3}
 --- !u!4 &4935003168828308467 stripped
@@ -1940,6 +1966,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e7a514641cdd67542a67e011572a45c0, type: 3}
   m_PrefabInstance: {fileID: 4897134910504786968}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5708162515788128585 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e7a514641cdd67542a67e011572a45c0, type: 3}
+  m_PrefabInstance: {fileID: 4897134910504786968}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &451483604848922684
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5708162515788128585}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.023548726, y: 0.0748633, z: 0.026538948}
+  m_Center: {x: 0.00000077066954, y: -0.0010359155, z: 0.013269474}
 --- !u!1001 &5387882180152948335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2597,6 +2641,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hidrante
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6192cda46fa83a04f9b0cf62a011bd29, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6192cda46fa83a04f9b0cf62a011bd29, type: 3}
 --- !u!4 &7207539010458968631 stripped
@@ -2604,6 +2652,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6192cda46fa83a04f9b0cf62a011bd29, type: 3}
   m_PrefabInstance: {fileID: 7173367754891724252}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8020209612976109709 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6192cda46fa83a04f9b0cf62a011bd29, type: 3}
+  m_PrefabInstance: {fileID: 7173367754891724252}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &4721013738366509173
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8020209612976109709}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0030652175, y: 0.0030652173, z: 0.006216122}
+  m_Center: {x: -0.00000002956949, y: -0.000000003667082, z: 0.003108061}
 --- !u!1001 &7470697085186020078
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2873,8 +2939,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Banca
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 158659fe6be17d542a08ae9f126828a6, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 158659fe6be17d542a08ae9f126828a6, type: 3}
+--- !u!1 &7467653263550560773 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 158659fe6be17d542a08ae9f126828a6, type: 3}
+  m_PrefabInstance: {fileID: 7738036015242839892}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &4064062656072656591
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7467653263550560773}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.015427477, y: 0.007270008, z: 0.0082862675}
+  m_Center: {x: -0.0002741711, y: 0.0006295448, z: 0.004143133}
 --- !u!4 &7848014654692909247 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 158659fe6be17d542a08ae9f126828a6, type: 3}
@@ -3405,8 +3493,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Maquina de Soda
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e616d1f815d8bd6469ca4cd529ddaf47, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e616d1f815d8bd6469ca4cd529ddaf47, type: 3}
+--- !u!1 &8533562745463938421 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e616d1f815d8bd6469ca4cd529ddaf47, type: 3}
+  m_PrefabInstance: {fileID: 8839483922727280676}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &963125968710178344
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8533562745463938421}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.009079286, y: 0.0103228595, z: 0.02001388}
+  m_Center: {x: 0.000000029765044, y: -0.0001776272, z: 0.01000694}
 --- !u!4 &9018069809271850959 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e616d1f815d8bd6469ca4cd529ddaf47, type: 3}
@@ -3475,8 +3585,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cono
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bb53b52043a75274b8ac675ab77676f6, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb53b52043a75274b8ac675ab77676f6, type: 3}
+--- !u!1 &8275794044563780274 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bb53b52043a75274b8ac675ab77676f6, type: 3}
+  m_PrefabInstance: {fileID: 9086275064794009571}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &8459266905013403521
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8275794044563780274}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0048993253, y: 0.0048993174, z: 0.0042716237}
+  m_Center: {x: 0.000000014784745, y: 0.0000000037252896, z: 0.0021358118}
 --- !u!4 &8760159310366124040 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bb53b52043a75274b8ac675ab77676f6, type: 3}

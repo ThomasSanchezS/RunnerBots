@@ -8,15 +8,15 @@ public class Enemy : MonoBehaviour
     private Animator animator;
     public List<GameObject> projectiles = new List<GameObject>();
     private float life = 10.0f;
-    private int random;
+    private int random = 3;
     private Vector3 startPos;
     private int projectilesLength;
     private int randomProjectile;
     private int randomPos;
-    private Vector3 posRightDown = new Vector3(10, 1, 0);
-    private Vector3 posRightUp = new Vector3(10, 10, 0);
-    private Vector3 posLeftDown = new Vector3(-10, 1, 0);
-    private Vector3 posLeftUp = new Vector3(-10, 10, 0);
+    private Vector3 posRightDown = new Vector3(7, 1, -10);
+    private Vector3 posRightUp = new Vector3(10, 8, -10);
+    private Vector3 posLeftDown = new Vector3(-7, 1, -10);
+    private Vector3 posLeftUp = new Vector3(-10, 8, -10);
     private List<Vector3> positions = new List<Vector3>();
     private AudioSource shootAudio;
     private Animator enemyAnimator;
@@ -35,7 +35,7 @@ public class Enemy : MonoBehaviour
 
         projectilesLength = projectiles.Count;
         startPos = transform.position;
-        InvokeRepeating("RandomMultiplier", 2f, 3f);
+        InvokeRepeating("RandomMultiplier", 2f, 2f);
         InvokeRepeating("InvokingProjectiles", 3f, 2f);
         InvokeRepeating("PosChanger", 6f, 4f);
         InvokeRepeating("LifeDecrease", 3f, 3f);
@@ -44,11 +44,10 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.y < -15 || transform.position.y > 20)
+        if (transform.position.z < -18 || transform.position.z > 0)
         {
             transform.position = startPos;
         }
-        transform.Translate(Vector3.forward * random * Time.deltaTime, Space.World);
 
         if (life < 1)
         {
@@ -60,6 +59,11 @@ public class Enemy : MonoBehaviour
             animator.SetBool("normal", true);
             Destroy(gameObject);
         }
+
+    }
+    void FixedUpdate()
+    {
+        transform.Translate(Vector3.forward * random * Time.deltaTime, Space.World);
     }
     private void LifeDecrease()
     {
@@ -67,7 +71,12 @@ public class Enemy : MonoBehaviour
     }
     private void RandomMultiplier()
     {
-        random = Random.Range(-9, 10);
+        if(random > 0){
+        random = Random.Range(-5, -1);
+        }
+        else{
+        random = Random.Range(2,6);    
+        }
     }
 
     private void InvokingProjectiles()

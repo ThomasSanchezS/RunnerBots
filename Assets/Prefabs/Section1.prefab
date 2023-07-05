@@ -2281,6 +2281,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2854451236693998793}
     m_Modifications:
+    - target: {fileID: 1091380621427916481, guid: 8e29c93fb69b4454e8ef66d22be7163d, type: 3}
+      propertyPath: m_Size.x
+      value: 0.022186432
+      objectReference: {fileID: 0}
+    - target: {fileID: 1091380621427916481, guid: 8e29c93fb69b4454e8ef66d22be7163d, type: 3}
+      propertyPath: m_Size.y
+      value: 0.04199536
+      objectReference: {fileID: 0}
+    - target: {fileID: 1091380621427916481, guid: 8e29c93fb69b4454e8ef66d22be7163d, type: 3}
+      propertyPath: m_Size.z
+      value: 0.01708019
+      objectReference: {fileID: 0}
+    - target: {fileID: 1091380621427916481, guid: 8e29c93fb69b4454e8ef66d22be7163d, type: 3}
+      propertyPath: m_Center.x
+      value: 0.00000005941368
+      objectReference: {fileID: 0}
+    - target: {fileID: 1091380621427916481, guid: 8e29c93fb69b4454e8ef66d22be7163d, type: 3}
+      propertyPath: m_Center.y
+      value: 0.00006382107
+      objectReference: {fileID: 0}
+    - target: {fileID: 1091380621427916481, guid: 8e29c93fb69b4454e8ef66d22be7163d, type: 3}
+      propertyPath: m_Center.z
+      value: 0.008540093
+      objectReference: {fileID: 0}
     - target: {fileID: 7324214319137825779, guid: 8e29c93fb69b4454e8ef66d22be7163d, type: 3}
       propertyPath: m_Name
       value: Policia
@@ -2329,8 +2353,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1091380621427916481, guid: 8e29c93fb69b4454e8ef66d22be7163d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8e29c93fb69b4454e8ef66d22be7163d, type: 3}
+--- !u!1 &235538682616442702 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7324214319137825779, guid: 8e29c93fb69b4454e8ef66d22be7163d, type: 3}
+  m_PrefabInstance: {fileID: 7412954884913056957}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2578893177293449341
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235538682616442702}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.022186432, y: 0.04199536, z: 0.01708019}
+  m_Center: {x: 0.00000005941368, y: 0.00006382107, z: 0.008540093}
 --- !u!4 &580715327823230452 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7993615228228761929, guid: 8e29c93fb69b4454e8ef66d22be7163d, type: 3}
